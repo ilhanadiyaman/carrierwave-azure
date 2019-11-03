@@ -39,7 +39,7 @@ module CarrierWave
         end
 
         def url(options = {})
-          path = ::File.join @uploader.azure_container, @path
+          path = @path
           if @uploader.asset_host
             "#{@uploader.asset_host}/#{path}"
           else
